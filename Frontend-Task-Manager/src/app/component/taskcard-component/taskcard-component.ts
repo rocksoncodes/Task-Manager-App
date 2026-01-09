@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './taskcard-component.css',
 })
 export class TaskcardComponent {
-
+    taskTitle: string = "Task Title";
+    taskDescription: string = "Your task for today is help John Doe with the development";
+    taskStatus: string = "Pending";
+    taskProgress: string = "Mark as Completed";
 }

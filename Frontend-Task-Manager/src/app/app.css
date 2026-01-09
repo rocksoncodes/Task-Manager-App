@@ -1,11 +1,13 @@
 .workspace {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 340px 3fr;
   gap: 1rem;
 }
 
 app-sidebar-component {
   height: 100vh;
+  position: sticky;
+  top: 0;
   border-right: solid 1px rgba(128, 128, 128, 0.58);
 }
 
@@ -15,6 +17,16 @@ app-home-component {
 
 .main-workspace {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   height: fit-content;
+  overflow-y: auto;
+}
+
+.task-space {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  height: fit-content;
+  gap: 1rem;
+  margin: 1rem;
 }
