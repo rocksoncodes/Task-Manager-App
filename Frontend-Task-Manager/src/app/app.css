@@ -1,0 +1,9 @@
+.workspace {
+  display: flex;
+}
+
+.main-workspace {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: fit-content;
+}
