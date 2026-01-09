@@ -1,1 +1,42 @@
-<p>sidebar-component works!</p>
+<section class="sidebar">
+
+  <div class="sidebar-top">
+    <div class="sidebar-logo">
+      <i class="fas fa-bars-progress"></i>
+      <h2>TODO</h2>
+    </div>
+
+    <div class="sidebar-workbuttons">
+      <h4>Menu</h4>
+
+      <button>
+        <i class="fas fa-dashboard"></i>
+        <span>Overview</span>
+      </button>
+
+      <button>
+        <i class="fas fa-list-check"></i>
+        <span>Pending Tasks</span>
+      </button>
+
+      <button>
+        <i class="fas fa-bars-progress"></i>
+        <span>Tasks in-progress</span>
+      </button>
+
+      <button>
+        <i class="fas fa-check-square"></i>
+        <span>Completed Tasks</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="sidebar-userprofile">
+    <img src="" alt="">
+    <div>
+      <h4>{{ userName }}</h4>
+      <p>{{email}}</p>
+    </div>
+  </div>
+
+</section>

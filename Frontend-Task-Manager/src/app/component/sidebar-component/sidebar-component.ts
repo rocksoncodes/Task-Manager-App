@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  userName: string = 'Rockson Michael'
+  email: string = 'michaelrockson@gmail.com'
+
 }
