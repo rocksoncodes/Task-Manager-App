@@ -1,0 +1,40 @@
+.home-component {
+  font-family: Inter, sans-serif;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.hero-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-texts h1 {
+  font-size: 4rem;
+}
+
+.hero-texts p {
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+.hero-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.hero-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-tabs button {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.5);
+}

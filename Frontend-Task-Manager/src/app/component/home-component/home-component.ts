@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  userName: string = 'Rockson'
+  subtitle: string = 'Here\'s whats on your plate today'
+
 }
