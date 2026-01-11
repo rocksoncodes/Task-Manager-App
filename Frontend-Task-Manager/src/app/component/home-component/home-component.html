@@ -7,9 +7,13 @@
     </div>
 
     <div class="hero-tabs">
-      <button>+ Add Tasks</button>
+      <button (click)="showModal()">+ Add Tasks</button>
       <button>Milestones</button>
     </div>
-  </div>
 
+    @if (showForm) {
+      <app-input-card-component (click)="hideModal()"></app-input-card-component>
+    }
+
+  </div>
 </section>

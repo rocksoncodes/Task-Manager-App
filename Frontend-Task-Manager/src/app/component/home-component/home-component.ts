@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
+import {InputCardComponent} from '../input-card-component/input-card-component';
 
 @Component({
   selector: 'app-home-component',
-  imports: [],
+  imports: [
+    InputCardComponent
+  ],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css',
 })
 
 export class HomeComponent {
+  showForm:boolean;
   currentDate: Date;
   currentHour: number;
   userName: string;
@@ -20,6 +24,7 @@ export class HomeComponent {
     this.userName = "Rockson"
     this.greeting = '';
     this.subtitle = ''
+    this.showForm = false;
     this.setGreeting()
   }
 
@@ -38,5 +43,12 @@ export class HomeComponent {
     }
   }
 
+  showModal() {
+    this.showForm = true;
+    console.log("showModal activated");
+  }
 
+  hideModal() {
+    this.showForm = false;
+  }
 }
