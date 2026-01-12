@@ -34,10 +34,10 @@ p {
 }
 
 .form-close-button {
-  background-color: white;
+  background-color: #bf0707;
   font-size: 18px;
-  border: solid 1px rgba(128, 128, 128, 0.58);
-  color: #555555;
+  border: none;
+  color: white;
   padding: 4px 8px;
   border-radius: 8px;
 }

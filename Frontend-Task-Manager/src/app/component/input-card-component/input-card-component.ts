@@ -13,7 +13,12 @@ export class InputCardComponent {
 
   @Output() closeModal = new EventEmitter<boolean>();
 
-  closeModalButton() {
+  closeModalButton():void {
+    this.closeModal.emit(false);
+  }
+
+  showNotification():void {
+    alert("Task Saved")
     this.closeModal.emit(false);
   }
 
