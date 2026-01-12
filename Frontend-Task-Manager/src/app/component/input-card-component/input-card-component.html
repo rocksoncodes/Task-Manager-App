@@ -13,11 +13,13 @@
           type="text"
           name="Task title"
           placeholder="Add task title"
+          [(ngModel)]="taskTitle"
         >
         <input
           type="text"
           name="Task description"
           placeholder="Add task description"
+          [(ngModel)]="taskDescription"
         >
       </div>
 
@@ -25,23 +27,23 @@
         <p>Mark task status:</p>
         <div class="input-radios">
           <div class = input-radio-single>
-            <input type="radio" id="today" name="choice1" value="1">
+            <input type="radio" id="today" name="choice1" value="1" [(ngModel)]="taskStatus">
             <label for="today">Today</label>
           </div>
 
           <div class = input-radio-single>
-            <input type="radio" id="tomorrow" name="choice2" value="2">
+            <input type="radio" id="tomorrow" name="choice2" value="2" [(ngModel)]="taskStatus">
             <label for="tomorrow">Tomorrow</label>
           </div>
 
           <div class = input-radio-single>
-            <input type="radio" id="overdue" name="choice3" value="2">
+            <input type="radio" id="overdue" name="choice3" value="3" [(ngModel)]="taskStatus">
             <label for="overdue">Overdue</label>
           </div>
         </div>
       </div>
 
-      <button (click)="showNotification()" class="input-card-button">Save Task</button>
+      <button (click)="saveTask()" class="input-card-button">Save Task</button>
     </div>
   </div>
 </div>
