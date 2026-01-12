@@ -1,1 +1,3 @@
 .idea/
+/Backend-Task-Manager/venv/
+/Backend-Task-Manager/.env
