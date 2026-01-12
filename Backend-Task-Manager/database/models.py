@@ -7,7 +7,7 @@ class Task(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String(255), nullable=False)
     task_descriptions = Column(String(255), nullable=False)
-    task_status = Column(String(30), nullable=False)
+    task_status = Column(Integer, nullable=False)
     completed = Column(Boolean, nullable=False)
 
 
