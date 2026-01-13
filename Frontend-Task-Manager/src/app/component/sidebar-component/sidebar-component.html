@@ -9,17 +9,17 @@
     <div class="sidebar-workbuttons">
       <h4>Menu</h4>
 
-      <button>
+      <button (click)="getAllTasks()">
         <i class="fas fa-list-check"></i>
         <span>All Tasks</span>
       </button>
 
-      <button>
+      <button (click)="getTomorrowsTasks()">
         <i class="fas fa-calendar-days"></i>
         <span>Tomorrow's Tasks</span>
       </button>
 
-      <button>
+      <button (click)="getCompletedTasks()">
         <i class="fas fa-check-square"></i>
         <span>Completed Tasks</span>
       </button>

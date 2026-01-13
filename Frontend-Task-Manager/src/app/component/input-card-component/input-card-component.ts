@@ -18,12 +18,14 @@ export class InputCardComponent {
   taskDescription: string;
   taskStatus: string;
   isCompleted: boolean;
+  private apiUrl: string;
 
   constructor( private http: HttpClient ) {
     this.taskTitle = '';
     this.taskDescription = '';
     this.taskStatus = '';
     this.isCompleted = false;
+    this.apiUrl = 'http://localhost:5000/api/tasks/';
   }
 
   @Output() closeModal = new EventEmitter<boolean>();
@@ -40,11 +42,10 @@ export class InputCardComponent {
       completed: this.isCompleted
     };
 
-    this.http.post('http://localhost:5000/api/tasks/create/task', payload).subscribe(response => {
+    this.http.post(this.apiUrl + "create/task", payload).subscribe(response => {
       console.log("Success", response);
     });
 
-    alert("Task saved:" + " " + this.taskTitle);
     this.closeModal.emit(false);
   }
 
