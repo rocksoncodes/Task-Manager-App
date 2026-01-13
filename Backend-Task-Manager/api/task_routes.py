@@ -54,10 +54,9 @@ def get_all_tasks():
 
 @task.route("/get/tasks/<task_status>", methods=["GET"])
 def get_task(task_status):
-
     try:
         with Sessions() as session:
-            task_stat = str(task_status)
+            task_stat = task_status
             specific_tasks = session.query(Task).filter(Task.task_status == task_stat).all()
 
             if not specific_tasks:
@@ -73,7 +72,31 @@ def get_task(task_status):
                     "completed": tasks.completed,
                 })
 
-            print(result)
+            return jsonify(result), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@task.route("/get/completed/tasks/<completed>", methods=["GET"])
+def get_completed_tasks(completed):
+    try:
+        with Sessions() as session:
+            task_completed = completed
+            specific_tasks = session.query(Task).filter(Task.completed == task_completed).all()
+
+            if not specific_tasks:
+                return jsonify({"message": "no tasks completed tasks found"}), 200
+
+            result = []
+
+            for tasks in specific_tasks:
+                result.append({
+                    "title": tasks.title,
+                    "task_descriptions": tasks.task_descriptions,
+                    "task_status": tasks.task_status,
+                    "completed": tasks.completed,
+                })
 
             return jsonify(result), 200
 
