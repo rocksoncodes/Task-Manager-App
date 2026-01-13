@@ -79,7 +79,7 @@ DATABASE_URL = "postgresql+psycopg2://user:password@localhost:5432/taskdb"
 
 ## Backend: Flask API (Task CRUD)
 
-The backend provides a CRUD API for tasks using Flask and SQLAlchemy. Endpoints are registered under /api/tasks.
+The backend provides a CRUD API for tasks using Flask and SQLAlchemy. Endpoints are registered under `/api/tasks.`
 
 ## Installation & Setup
 
