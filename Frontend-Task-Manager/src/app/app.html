@@ -5,15 +5,12 @@
     <app-home-component></app-home-component>
 
     <div class="task-space">
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
-      <app-taskcard-component></app-taskcard-component>
+      @for (task of tasks; track task.title) {
+        <app-taskcard-component [task]="task"></app-taskcard-component>
+      } @empty {
+        <p>No tasks found</p>
+      }
+
     </div>
   </section>
 </main>
