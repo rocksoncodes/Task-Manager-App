@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App implements OnInit {
   protected readonly title = signal('Frontend-Task-Manager');
   tasks: any[];

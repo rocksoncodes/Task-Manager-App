@@ -1,4 +1,4 @@
-# Task Manager App
+# Atlas Task Manager
 
 An Angular-based task manager application currently under development, paired with a Flask backend API. This project is intended for learning, testing and contributions.
 
@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed on your system:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/rocksoncodes/Task-Manager-App.git
+git clone https://github.com/rocksoncodes/Atlas-Task-Manager.git
 cd Frontend-Task-Manager
 ```
 
