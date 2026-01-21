@@ -1,7 +1,6 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request
 from sqlalchemy.orm import sessionmaker
 from database.database import database_engine
-from database.models import Task
 from api.task_controller import TaskController
 
 task =  Blueprint("task", __name__)
